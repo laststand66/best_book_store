@@ -1,0 +1,30 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}Главная{% endblock %} - Best Book Store Ever</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+        {% bootstrap_javascript jquery='slim' %}
+</head>
+<body>
+    <div class="container">
+        <h2>Best Book Store Ever</h2>
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+              <a class="p-2 text-muted" href="#">Главная</a>
+              <a class="p-2 text-muted" href="#">Доска объявлений</a>
+              <a class="p-2 text-muted" href="#">Регистрация</a>
+              <a class="p-2 text-muted" href="#">Вход</a>
+            </nav>
+          </div>
+    </div>
+
+
+
+</body>
+</html>
