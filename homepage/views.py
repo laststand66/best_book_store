@@ -1,12 +1,21 @@
 from django.shortcuts import render
-from .models import Post
+from django.http import HttpResponse, Http404
+from django.template import TemplateDoesNotExist
+from django.template.loader import get_template
 # Create your views here.
 # Контроллер-функция, которая возвращает нам базовую страницу из папки шаблонов
+
+
 def index(request):
     return render(request, 'basic.html',)
 
-def post_view(request):
-    posts = Post.objects.all()
-    return render(request, 'homepage/product_page.html', context={'posts': posts})
+
+def other_page(request, page):
+    try:
+        template = get_template('homepage/' + page + '.html')
+    except TemplateDoesNotExist:
+        raise Http404
+    return HttpResponse(template.render(request=request))
+
 
 
