@@ -22,7 +22,7 @@
               <a class="p-2 text-muted" href="{% url 'homepage:profile' %}">Посты пользователя {{ user.username }}</a>
               {% else %}
               <a class="p-2 text-muted" href="{% url 'homepage:login' %}">Вход</a>
-              <a class="p-2 text-muted" href="#">Регистрация</a>
+              <a class="p-2 text-muted" href="{% url 'homepage:register' %}">Регистрация</a>
               {% endif %}
               <a class="p-2 text-muted" href="{% url 'homepage:logout' %}">Выход</a>
               <a class="p-2 text-muted" href="{% url 'homepage:about' %}">Контакты</a>

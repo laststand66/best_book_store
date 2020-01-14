@@ -10,4 +10,6 @@
     <p>Здравствуйте!</p>
     {% endif %}
     <h3>Ваши посты</h3>
+    <a type="button" class="btn btn-primary" href="{% url 'homepage:profile_change' %}">Изменить личные данные</a>
+    <a type="button" class="btn btn-primary" href="{% url 'homepage:password_change' %}">Изменить пароль</a>
 {% endblock %}
