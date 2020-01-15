@@ -125,3 +125,10 @@ STATIC_URL = '/static/'
 
 
 AUTH_USER_MODEL = 'homepage.MainUser'
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'pupkindjango66@gmail.com'
+EMAIL_HOST_PASSWORD = 'DarkSouls666'
